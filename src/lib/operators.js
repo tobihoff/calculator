@@ -13,3 +13,7 @@ export function multiply(a, b) {
 export function sub(a, b) {
   return a - b;
 }
+
+export function countDigits(number) {
+  return number.toString().length;
+}
