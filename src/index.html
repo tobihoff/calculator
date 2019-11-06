@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Calculator</title>
+    <link href="./partials/style.scss" />
   </head>
   <body>
     <input
@@ -19,11 +20,15 @@
       placeholder="Enter second number"
       value="0"
     />
-    <button class="submit">sum</button>
-    <button class="divide">divide</button>
-    <button class="multiply">multiply</button>
-    <button class="sub">sub</button>
-    <div id="result">0</div>
+    <div class="container">
+      <button class="submit">sum</button>
+      <button class="length">length</button>
+      <button class="divide">divide</button>
+      <button class="multiply">multiply</button>
+      <button class="sub">sub</button>
+      <div id="result">0</div>
+      <div id="result2">0</div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
