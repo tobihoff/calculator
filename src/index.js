@@ -1,11 +1,34 @@
-const primaryColor = "red";
-const secondaryColor = "blue";
+"use strict";
+
+import { sum, divide, multiply, sub } from "./lib/operators";
 
 const firstElement = document.querySelector("[name=first]");
 const secondElement = document.querySelector("[name=second]");
 const submitButton = document.querySelector(".submit");
+const divideButton = document.querySelector(".divide");
+const multiplyButton = document.querySelector(".multiply");
+const subButton = document.querySelector(".sub");
+const result = document.querySelector("#result");
 
 submitButton.addEventListener("click", function() {
-  const sum = parseInt(firstElement.value) + parseInt(secondElement.value);
-  alert(sum);
+  const firstNumber = parseInt(firstElement.value);
+  const secondNumber = parseInt(secondElement.value);
+  result.innerHTML = sum(firstNumber, secondNumber);
+});
+
+divideButton.addEventListener("click", function() {
+  const firstNumber = parseInt(firstElement.value);
+  const secondNumber = parseInt(secondElement.value);
+  result.innerHTML = divide(firstNumber, secondNumber);
+});
+
+multiplyButton.addEventListener("click", function() {
+  const firstNumber = parseInt(firstElement.value);
+  const secondNumber = parseInt(secondElement.value);
+  result.innerHTML = multiply(firstNumber, secondNumber);
+});
+subButton.addEventListener("click", function() {
+  const firstNumber = parseInt(firstElement.value);
+  const secondNumber = parseInt(secondElement.value);
+  result.innerHTML = sub(firstNumber, secondNumber);
 });
