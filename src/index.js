@@ -1,6 +1,7 @@
 "use strict";
 
 import { sum, divide, multiply, sub, countDigits } from "./lib/operators";
+import { appendElementToElement, createDivWithContent } from "./lib/elements";
 
 const firstElement = document.querySelector("[name=first]");
 const secondElement = document.querySelector("[name=second]");
@@ -37,3 +38,15 @@ subButton.addEventListener("click", function() {
 lengthButton.addEventListener("click", function() {
   result2.innerHTML = countDigits(result.innerHTML);
 });
+
+function handleCLick(operator, operatorFunction) {
+  const firstElement = parseInt(firstElement.value);
+  const secondElement = parseInt(secondElement.value);
+  let childResult = operatorFunction(firstNumber, secondNumber);
+  childResult = createDivWithContent(childResult);
+  appendElementToElement(result, childResult);
+  operator.innerHTML = operator;
+  digitCounter.innerHTML = countDigits(
+    operatorFunction(firstNumber, secondNumber)
+  );
+}
